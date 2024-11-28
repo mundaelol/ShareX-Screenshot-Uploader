@@ -1,0 +1,12 @@
+﻿{
+  "Version": "16.0.1",
+  "Name": "Upload - Test",
+  "DestinationType": "ImageUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "http://localhost:8080/upload/screenshot",
+  "Body": "MultipartFormData",
+  "Arguments": {
+    "apiKey": "YOUR_PRIVATE_API_KEY"
+  },
+  "FileFormName": "sharex"
+}
