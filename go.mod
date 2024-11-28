@@ -1,4 +1,4 @@
-module mundae-uploader
+module github.com/mundaelol/ShareX-Screenshot-Uploader
 
 go 1.23.0
 

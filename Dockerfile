@@ -1,11 +1,24 @@
-FROM golang:1.23.0-alpine
+FROM golang:1.23.0-alpine AS base
 
 WORKDIR /app
 
-RUN apk add --no-cache git && git clone https://github.com/mundaelol/ShareX-Screenshot-Uploader.git .
+FROM base AS builder
 
+RUN apk add --no-cache git
+
+RUN git clone https://github.com/mundaelol/ShareX-Screenshot-Uploader.git .
 RUN go mod download && go mod verify
+RUN go build -o /app/uploader main.go
 
-EXPOSE 8080
+FROM base AS runner
 
-CMD ["go", "run", "main.go"]
+COPY --from=builder /app/.env /app/.env
+COPY --from=builder /app/uploader /app/uploader
+
+RUN chown -R nobody:nogroup /app
+
+USER nobody
+
+EXPOSE 8080/tcp
+
+CMD ["/app/uploader"]

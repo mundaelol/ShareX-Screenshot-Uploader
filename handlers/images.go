@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"mundae-uploader/utils"
+	"github.com/mundaelol/ShareX-Screenshot-Uploader/utils"
 )
 
 func ImagesHandler(w http.ResponseWriter, r *http.Request) {

@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	"mundae-uploader/handlers"
-	"mundae-uploader/utils"
+	"github.com/mundaelol/ShareX-Screenshot-Uploader/handlers"
+	"github.com/mundaelol/ShareX-Screenshot-Uploader/utils"
 
 	"github.com/joho/godotenv"
 )

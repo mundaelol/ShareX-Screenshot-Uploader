@@ -8,7 +8,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"mundae-uploader/utils"
+	"github.com/mundaelol/ShareX-Screenshot-Uploader/utils"
 )
 
 func UploadHandler(apiKey string) http.HandlerFunc {
