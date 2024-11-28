@@ -33,7 +33,7 @@ func UploadHandler(apiKey string) http.HandlerFunc {
 			return
 		}
 
-		file, fileHeader, err := r.FormFile("sharex")
+		file, fileHeader, err := r.FormFile("Image")
 		if err != nil {
 			http.Error(w, "Failed to retrieve file: "+err.Error(), http.StatusBadRequest)
 			return

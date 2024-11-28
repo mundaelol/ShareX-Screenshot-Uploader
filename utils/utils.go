@@ -43,7 +43,7 @@ func init() {
 func EnsureDir() {
 	if _, err := os.Stat(Directory); os.IsNotExist(err) {
 		if err := os.MkdirAll(Directory, os.ModePerm); err != nil {
-			log.Fatalf("Failed to create sharex directory: %v", err)
+			log.Fatalf("Failed to create directory: %v", err)
 		}
 	}
 }
